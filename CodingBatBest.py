@@ -1,6 +1,7 @@
-# 1.
+# 1
 # Warmup-1 > sleep_in
-# The parameter weekday is True if it is a weekday, and the parameter vacation is True if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return True if we sleep in.
+# The parameter weekday is True if it is a weekday, and the parameter vacation is True if we are on vacation. We sleep in if it is not a 
+# weekday or we're on vacation. Return True if we sleep in.
 
 # sleep_in(False, False) → True
 # sleep_in(True, False) → False
@@ -13,7 +14,8 @@ def sleep_in(weekday, vacation):
 ###################################################################################################
 # 2
 # Warmup-1 > monkey_trouble
-# We have two monkeys, a and b, and the parameters a_smile and b_smile indicate if each is smiling. We are in trouble if they are both smiling or if neither of them is smiling. Return True if we are in trouble.
+# We have two monkeys, a and b, and the parameters a_smile and b_smile indicate if each is smiling. We are in trouble if they are both 
+# smiling or if neither of them is smiling. Return True if we are in trouble.
 
 # monkey_trouble(True, True) → True
 # monkey_trouble(False, False) → True
@@ -39,7 +41,8 @@ def sum_double(a, b):
 ###################################################################################################
 # 4
 # Warmup-1 > pos_neg
-# Given 2 int values, return True if one is negative and one is positive. Except if the parameter "negative" is True, then return True only if both are negative.
+# Given 2 int values, return True if one is negative and one is positive. Except if the parameter "negative" is True, then return True only 
+# if both are negative.
 
 # pos_neg(1, -1, False) → True
 # pos_neg(-1, 1, False) → True
@@ -99,7 +102,8 @@ def array_front9(nums):
 ###################################################################################################
 # 7
 # Warmup-2 > string_match
-# Given 2 strings, a and b, return the number of the positions where they contain the same length 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" substrings appear in the same place in both strings.
+# Given 2 strings, a and b, return the number of the positions where they contain the same length 2 substring. So "xxcaazz" and "xxbaaz" 
+# yields 3, since the "xx", "aa", and "az" substrings appear in the same place in both strings.
 
 # string_match('xxcaazz', 'xxbaaz') → 3
 # string_match('abc', 'abc') → 2
@@ -111,7 +115,8 @@ def string_match(a, b):
   	for i in range(l-1):
     	count += a[i:i+2] == b[i:i+2]
   	return(count)
-# !!!! Attention: ici comme on compare des couples de lettres 2 par 2, faur range(l-1), ou alors à la fin on compare la dernière lettre seulement.
+
+# !!!! Caution: use range(l-1) to avoid index out of bound when comparing letters 2 by 2.
 
 
 ###################################################################################################
@@ -145,7 +150,8 @@ def make_bricks(small, big, goal):
 ###################################################################################################
 # 9
 # Logic-2 > lone_sum
-# Given 3 int values, a b c, return their sum. However, if one of the values is the same as another of the values, it does not count towards the sum.
+# Given 3 int values, a b c, return their sum. However, if one of the values is the same as another of the values, it does not count towards
+# the sum.
 
 # lone_sum(1, 2, 3) → 6
 # lone_sum(3, 2, 3) → 2
@@ -158,7 +164,8 @@ def lone_sum(a, b, c):
 ###################################################################################################
 # 10
 # Logic-2 > lucky_sum
-# Given 3 int values, a b c, return their sum. However, if one of the values is 13 then it does not count towards the sum and values to its right do not count. So for example, if b is 13, then both b and c do not count.
+# Given 3 int values, a b c, return their sum. However, if one of the values is 13 then it does not count towards the sum and values to its 
+# right do not count. So for example, if b is 13, then both b and c do not count.
 
 # lucky_sum(1, 2, 3) → 6
 # lucky_sum(1, 2, 13) → 3
@@ -270,7 +277,8 @@ def sum13(nums):
 # 14
 
 # List-2 > sum13
-# Return the sum of the numbers in the array, returning 0 for an empty array. Except the number 13 is very unlucky, so it does not count and numbers that come immediately after a 13 also do not count.
+# Return the sum of the numbers in the array, returning 0 for an empty array. Except the number 13 is very unlucky, so it does not count 
+# and numbers that come immediately after a 13 also do not count.
 
 # sum13([1, 2, 2, 1]) → 6
 # sum13([1, 1]) → 2
@@ -291,7 +299,8 @@ def sum13(nums):
 ###################################################################################################
 # 15
 # List-2 > sum67
-# Return the sum of the numbers in the array, except ignore sections of numbers starting with a 6 and extending to the next 7 (every 6 will be followed by at least one 7). Return 0 for no numbers.
+# Return the sum of the numbers in the array, except ignore sections of numbers starting with a 6 and extending to the next 7 
+# (every 6 will be followed by at least one 7). Return 0 for no numbers.
 
 # sum67([1, 2, 2]) → 5
 # sum67([1, 2, 2, 6, 99, 99, 7]) → 5
