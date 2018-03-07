@@ -49,7 +49,7 @@ def sum_double(a, b):
 # pos_neg(-4, -5, True) → True
 
 def pos_neg(a, b, negative):
-  return((negative and a+b<0) or (not negative and a*b<0))  
+	return((negative and a+b<0) or (not negative and a*b<0))  
 
 
 
@@ -179,10 +179,10 @@ def lucky_sum(a, b, c):
 # 11
 # Logic-2 > round_sum
 # For this problem, we'll round an int value up to the next multiple of 10 if its rightmost digit is 
-#  or more, so 15 rounds up to 20. Alternately, round down to the previous multiple of 10 if its 
-#  rightmost digit is less than 5, so 12 rounds down to 10. Given 3 ints, a b c, return the sum of
-#   their rounded values. To avoid code repetition, write a separate helper "def round10(num):" and 
-#   call it 3 times. Write the helper entirely below and at the same indent level as round_sum().
+# or more, so 15 rounds up to 20. Alternately, round down to the previous multiple of 10 if its 
+# rightmost digit is less than 5, so 12 rounds down to 10. Given 3 ints, a b c, return the sum of
+# their rounded values. To avoid code repetition, write a separate helper "def round10(num):" and 
+# call it 3 times. Write the helper entirely below and at the same indent level as round_sum().
 
 # round_sum(16, 17, 18) → 60
 # round_sum(12, 13, 14) → 30
@@ -243,11 +243,11 @@ def count_pat(str, pat):
 # sum13([1, 2, 2, 1, 13]) → 6
 
 ## ERROR: index out of range
-## l'expression avant le "and" est évaluée en premier et si elle vraie la suite est evaluée:
-## donc dans le while qui suit il faut évaluer "i < len(nums))" d'abord ou on obtient un "index out of range"
-## La 
+## With the "and" operand, the Right side is evaluated first, if it is True the left side is then evaluated 
+## Hence in the while we should first evaluate "i < len(nums))" otherwise we get an "index out of range"
 
 
+# Bad Solution:
 def sum13(nums):
   	if len(nums) < 1:
     	return(0)
@@ -260,7 +260,7 @@ def sum13(nums):
     	return(res)
     
 
-# Bonne Solution:
+# Good Solution:
 def sum13(nums):
   	if len(nums) < 1:
     	return(0)
@@ -307,21 +307,21 @@ def sum13(nums):
 # sum67([1, 1, 6, 7, 2]) → 4
 
 def sum67(nums):
-  if len(nums) == 0:
-    return(0)
-  else:
-    i = 0
-    res = 0
-    while(i<len(nums)):
-      if nums[i] != 6:
-        res += nums[i]
-        i += 1
-      else:
-        i += 1
-        if nums[i] == 7:
-          i += 1
-        else:
-          while(i < len(nums) and nums[i]!=7):
-            i += 1
-          i += 1
-    return(res)
+	if len(nums) == 0:
+    	return(0)
+	else:
+    	i = 0
+    	res = 0
+    	while(i<len(nums)):
+      		if nums[i] != 6:
+        		res += nums[i]
+        		i += 1
+      		else:
+        		i += 1
+        		if nums[i] == 7:
+          			i += 1
+        		else:
+          			while(i < len(nums) and nums[i]!=7):
+            			i += 1
+          			i += 1
+    	return(res)
