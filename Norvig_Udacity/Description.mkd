@@ -6,10 +6,9 @@
   B. __Straight__: 5 consecutive ranks and the suits don't matter  
   C. __Fluch__: all cards have the same suit, ranks don't matter  
 4. 
-````python
+```python
 poker() #function takes a list of hands as input and returns the best hand  
 ```
-
 [Link: Poker hands hierarchy](https://www.cardschat.com/top-10-poker-hands.php)
 
 ![Poker Hands](https://www.cardschat.com/pkimg/hand-nicknames/poker-hand-rankings_thumb.png)
