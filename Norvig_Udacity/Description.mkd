@@ -11,4 +11,4 @@ poker() #function takes a list of hands as input and returns the best hand
 ```
 [Link: Poker hands hierarchy](https://www.cardschat.com/top-10-poker-hands.php)
 
-![Poker Hands](https://www.cardschat.com/pkimg/hand-nicknames/poker-hand-rankings_thumb.png)
+![Poker Hands](src="https://www.cardschat.com/pkimg/hand-nicknames/poker-hand-rankings.png" )
