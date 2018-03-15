@@ -86,7 +86,8 @@ def array_count9(nums):
 # array_front9([1, 2, 9, 3, 4]) → True
 # array_front9([1, 2, 3, 4, 9]) → False
 # array_front9([1, 2, 3, 4, 5]) → False
-## Bonne Solution:
+
+#!!!!! Good Solution: !!!!!#
 def array_front9(nums):
 	end = len(nums)
   	if end > 4:
@@ -96,12 +97,12 @@ def array_front9(nums):
      	return(True)
   	return(False)
 
-## Mauvaise solution:
-##### Plusieurs pb:
-# 1- On réassigne une nouvelle valeur à nums, ce qui n'est pas nécessaire dans la première solution
-# 2- On parcourt toute la liste, alors que dans la première solution, la boucle s'arrête dès qu'un élément de la liste vaut 9
- def array_front9(nums):
- 	count = 0
+"#!!!!! Bad Solution: !!!!!#"
+'''#!!!!! Issues: !!!!!#
+#!!!!! 1- Reassigning a new value to nums which is unecessary in the "Good Solution"
+#!!!!!On parcourt toute la liste, alors que dans la première solution, la boucle s'arrête dès qu'un élément de la liste vaut 9'''
+def array_front9(nums):
+	count = 0
   	if len(nums) > 4:
     	nums = nums[:4]
   	for num in nums:
