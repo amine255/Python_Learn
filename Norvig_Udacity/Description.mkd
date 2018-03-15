@@ -9,6 +9,6 @@
 ```python
 poker() #function takes a list of hands as input and returns the best hand  
 ```
-[Link: Poker hands hierarchy](https://www.cardschat.com/top-10-poker-hands.php)
+[Link: Poker hands rankings](https://www.cardschat.com/top-10-poker-hands.php)
 
 ![Poker Hands](https://www.cardschat.com/pkimg/hand-nicknames/poker-hand-rankings.png)
