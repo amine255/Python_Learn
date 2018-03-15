@@ -97,10 +97,10 @@ def array_front9(nums):
      	return(True)
   	return(False)
 
-"#!!!!! Bad Solution: !!!!!#"
-'''#!!!!! Issues: !!!!!#
-#!!!!! 1- Reassigning a new value to nums which is unecessary in the "Good Solution"
-#!!!!!On parcourt toute la liste, alors que dans la première solution, la boucle s'arrête dès qu'un élément de la liste vaut 9'''
+#!!!!! Bad Solution: !!!!!#
+#!!!!! Issues: !!!!!#
+#!!!!! 1 - Reassigning a new value to nums which is unecessary in the "Good Solution"
+#!!!!! 2 - The loop go through the whole list whereas in the "Good Solution" the loop stops when it finds a 9
 def array_front9(nums):
 	count = 0
   	if len(nums) > 4:
@@ -240,8 +240,7 @@ def count_pat(str, pat):
 
 ###################################################################################################
 # 13
-### Bon exemple d'erreur d'approche avec While et les listes indexées:
-
+#!!!!! Good example of what not to do in a while loop with a list:
 
 # List-2 > sum13
 # Return the sum of the numbers in the array, returning 0 for an empty array. 
