@@ -1,0 +1,12 @@
+1 - hand: 5 cards
+2 - card: rank & suit
+3 - hand rank - Three concepts:
+  A - n-kind: n cards of the same ranks (kind) like two 3s or four 9s
+  B - Straight: 5 consecutive ranks and the suits don't matter
+  C - Fluch: all cards have the same suit, ranks don't matter
+
+4- poker() function takes a list of hands as input and returns the best hand
+
+Poker hands hierarchy: 
+https://www.cardschat.com/top-10-poker-hands.php
+
