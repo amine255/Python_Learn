@@ -1,5 +1,5 @@
 def poker(hands):
-    "Return the best hand: poker([hand,...]) => hand"
+    "Return a list of winning hands: poker([hand,...]) => [hand, ...]"
     return allmax(hands, key=hand_rank) 
   
 ##############################################################################################################################  
@@ -80,7 +80,14 @@ def card_ranks(cards):
 ##############################################################################################################################
 def straight(ranks):
     "Return True if the ordered ranks form a 5-card straight."
+    return (max(ranks)-min(ranks) == 4) and len(set(ranks)) == 5
+
+# My method:
+'''
+def straight(ranks):
+    "Return True if the ordered ranks form a 5-card straight."
     return((ranks[-1] - ranks[0] == 4) and (sum(ranks)/5 == ranks[2]))
+'''
 
 ##############################################################################################################################  
 def flush(hand):
@@ -196,12 +203,12 @@ def test():
     assert card_ranks(sf) == [10, 9, 8, 7, 6]
     assert card_ranks(fk) == [9, 9, 9, 9, 7]
     assert card_ranks(fh) == [10, 10, 10, 7, 7]
-    assert poker([sf, fk, fh]) == sf
-    assert poker([sf, fk, fh]) == sf
-    assert poker([fk, fh]) == fk
-    assert poker([fh, fh]) == fh
-    assert poker([fh]) == fh
-    assert poker([sf] + 99*[fh]) == sf
+    assert poker([sf, fk, fh]) == [sf]
+    assert poker([sf, fk, fh]) == [sf]
+    assert poker([fk, fh]) == [fk]
+    assert poker([fh, fh]) == [fh, fh]
+    assert poker([fh]) == [fh]
+    assert poker([sf] + 99*[fh]) == [sf]
     assert hand_rank(sf) == (8, 10)
     assert hand_rank(fk) == (7, 9, 7)
     assert hand_rank(fh) == (6, 10, 7)
